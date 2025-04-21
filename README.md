@@ -1,4 +1,4 @@
-# 定风波AI大模型
+# Su-Shi-dingfengbo-poems-fine-tuning-AI-model
 
 ## 简介
 
