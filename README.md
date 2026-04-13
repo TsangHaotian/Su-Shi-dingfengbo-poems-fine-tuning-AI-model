@@ -34,13 +34,13 @@ The training data includes 168 knowledge points related to "Ding Feng Bo," cover
 
 ```json
 {
-  "summary": "This poem was written in the spring of the fifth year of Yuanfeng of Emperor Shenzong of Song (1082 AD), when Su Shi was demoted to Huangzhou as a military assistant for the third spring due to the 'Wutai Poetry Case'.",
-  "content": "#DingFengBo #SuShi #ThemeThought",
-  "summary": "This poem is a work expressing feelings after getting drunk and encountering rain. The poet used the act of walking leisurely in the rain to show his stubborn character and open-mindedness despite being in adversity and facing repeated setbacks."
+  "summary": "这首词作于宋神宗元丰五年（公元1082年）春，当时是苏轼因“乌台诗案”被贬为黄州团练副使的第三个春天。",
+  "content": "#定风波 #苏轼#主题思想",
+  "summary": "此词为醉归遇雨抒怀之作。词人借雨中潇洒徐行之举动，表现了虽处逆境屡遭挫折而不畏惧不颓丧的倔强性格和旷达胸怀。"
 },
 {
-  "content": "#DingFengBo #SuShi #Appreciation #FirstLine",
-  "summary": "The first line 'Do not listen to the sound of rain beating against the leaves', on one hand, depicts the stormy weather, and on the other, uses the words 'do not listen' to indicate that external things should not disturb one's mind."
+  "content": "#定风波 #苏轼#赏析 #首句",
+  "summary": "首句“莫听穿林打叶声”，一方面渲染出雨骤风狂，另一方面又以“莫听”二字点明外物不足萦怀之意。"
 },
 ...
 ```
@@ -50,9 +50,9 @@ The training data includes 168 knowledge points related to "Ding Feng Bo," cover
 Below are examples of model inference, demonstrating the model's understanding and generation capabilities regarding "Ding Feng Bo":
 
 ```
-Question: Ding Feng Bo
-Answer: Ding Feng Bo · Do Not Listen to the Sound of Rain Beating Against the Leaves
-This poem was written by Su Shi during his period of demotion, expressing his open-mindedness and transcendence in adversity. The line "Do not listen to the sound of rain beating against the leaves" is a vivid portrayal of an attitude of transcendence towards adversity.
+问题: 定风波
+回答: 定风波·莫听穿林打叶声
+这首词是苏轼在贬谪时期所作，表达了他在逆境中的豁达与超然。诗中的“莫听穿林打叶声”一句，是对逆境的超然态度的生动写照。
 ```
 
 ## Model Performance
@@ -76,7 +76,7 @@ The model demonstrated good convergence during training, with the loss value gra
 
 3. **Perform Inference**:
    ```python
-   question = "Ding Feng Bo"
+   question = "定风坡"
    answer = model.generate(question)
    print(answer)
    ```
