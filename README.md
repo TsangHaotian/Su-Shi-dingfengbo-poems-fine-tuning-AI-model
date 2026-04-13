@@ -1,28 +1,26 @@
-# Su-Shi-dingfengbo-poems-fine-tuning-AI-model
+# Su-Shi-Dingfengbo-Poems-Fine-Tuning-AI-Model
 
-## 简介
+## Introduction
 
-本项目介绍了一个基于《定风波》168个知识点微调训练的AI大模型。该模型旨在理解和生成与《定风波》相关的文本内容，提供深入的诗词分析和创作能力。
+This project introduces an AI large model fine-tuned based on 168 knowledge points from "Ding Feng Bo" (定风波). The model aims to understand and generate text content related to "Ding Feng Bo," providing in-depth poetry analysis and creative capabilities.
 
-## 模型架构
+## Model Architecture
 
-- **模型名称**: DeepSeek-LLM-7B-Chat
-- **训练数据**: 168个《定风波》知识点
-- **训练框架**: LlamaFactory
-- **训练时间**: 2025年4月21日
+- **Model Name**: DeepSeek-LLM-7B-Chat
+- **Training Data**: 168 knowledge points of "Ding Feng Bo"
+- **Training Framework**: LlamaFactory
+- **Training Date**: April 21, 2025
 
-## 训练过程
+## Training Process
 
-### 训练损失图
+### Training Loss Graph
 ![5b7eb732f41e7a9693021489bb76120](https://github.com/user-attachments/assets/464b350e-2e23-47a5-8976-5a6df1d70c44)
 
-### 训练结果运行图
+### Training Result Run Graph
 <img width="1067" alt="41f5f573cee062530e41cef9e9f32c7" src="https://github.com/user-attachments/assets/e14c99e5-8d63-4466-b038-55e52a388d1e" />
+### Training Logs
 
-
-### 训练日志
-
-以下是部分训练日志，展示了损失值、学习率、梯度范数等关键指标：
+Below are excerpts from the training logs, showing key metrics such as loss, learning rate, and gradient norm:
 
 ```
 INFO[2025-04-21 13:43:13] llamafactory.train.callbacks:143 >> {'loss': 0.9834, 'learning_rate': 1.3581e-04, 'epoch': 1.54, 'throughput': 5.25}
@@ -30,45 +28,45 @@ INFO[2025-04-21 13:45:57] llamafactory.train.callbacks:143 >> {'loss': 0.9444, '
 ...
 ```
 
-## 训练数据
+## Training Data
 
-训练数据包含《定风波》相关的168个知识点，涵盖诗词赏析、背景知识、作者介绍等多个方面。以下是部分示例数据：
+The training data includes 168 knowledge points related to "Ding Feng Bo," covering poetry appreciation, background knowledge, author introduction, and more. Here are some example data entries:
 
 ```json
 {
-  "summary": "这首词作于宋神宗元丰五年（公元1082年）春，当时是苏轼因“乌台诗案”被贬为黄州团练副使的第三个春天。",
-  "content": "#定风波 #苏轼#主题思想",
-  "summary": "此词为醉归遇雨抒怀之作。词人借雨中潇洒徐行之举动，表现了虽处逆境屡遭挫折而不畏惧不颓丧的倔强性格和旷达胸怀。"
+  "summary": "This poem was written in the spring of the fifth year of Yuanfeng of Emperor Shenzong of Song (1082 AD), when Su Shi was demoted to Huangzhou as a military assistant for the third spring due to the 'Wutai Poetry Case'.",
+  "content": "#DingFengBo #SuShi #ThemeThought",
+  "summary": "This poem is a work expressing feelings after getting drunk and encountering rain. The poet used the act of walking leisurely in the rain to show his stubborn character and open-mindedness despite being in adversity and facing repeated setbacks."
 },
 {
-  "content": "#定风波 #苏轼#赏析 #首句",
-  "summary": "首句“莫听穿林打叶声”，一方面渲染出雨骤风狂，另一方面又以“莫听”二字点明外物不足萦怀之意。"
+  "content": "#DingFengBo #SuShi #Appreciation #FirstLine",
+  "summary": "The first line 'Do not listen to the sound of rain beating against the leaves', on one hand, depicts the stormy weather, and on the other, uses the words 'do not listen' to indicate that external things should not disturb one's mind."
 },
 ...
 ```
 
-## 模型推理
+## Model Inference
 
-以下是模型推理的示例，展示了模型对《定风波》的理解和生成能力：
+Below are examples of model inference, demonstrating the model's understanding and generation capabilities regarding "Ding Feng Bo":
 
 ```
-问题: 定风波
-回答: 定风波·莫听穿林打叶声
-这首词是苏轼在贬谪时期所作，表达了他在逆境中的豁达与超然。诗中的“莫听穿林打叶声”一句，是对逆境的超然态度的生动写照。
+Question: Ding Feng Bo
+Answer: Ding Feng Bo · Do Not Listen to the Sound of Rain Beating Against the Leaves
+This poem was written by Su Shi during his period of demotion, expressing his open-mindedness and transcendence in adversity. The line "Do not listen to the sound of rain beating against the leaves" is a vivid portrayal of an attitude of transcendence towards adversity.
 ```
 
-## 模型性能
+## Model Performance
 
-模型在训练过程中表现出良好的收敛性，损失值从初始的2.0逐渐下降到0.3左右，表明模型在理解和生成《定风波》相关内容方面取得了显著进展。
+The model demonstrated good convergence during training, with the loss value gradually decreasing from an initial 2.0 to around 0.3, indicating significant progress in understanding and generating content related to "Ding Feng Bo."
 
-## 使用方法
+## Usage Instructions
 
-1. **安装依赖**:
+1. **Install Dependencies**:
    ```bash
    pip install llamafactory transformers
    ```
 
-2. **加载模型**:
+2. **Load Model**:
    ```python
    from llamafactory import LLMFactory
 
@@ -76,25 +74,22 @@ INFO[2025-04-21 13:45:57] llamafactory.train.callbacks:143 >> {'loss': 0.9444, '
    model = factory.load_model("path/to/your/model")
    ```
 
-3. **进行推理**:
+3. **Perform Inference**:
    ```python
-   question = "定风波"
+   question = "Ding Feng Bo"
    answer = model.generate(question)
    print(answer)
    ```
 
-## 贡献
+## Contribution
 
-欢迎对本项目进行贡献，提交PR或Issue以改进模型或添加更多知识点。
+Contributions to this project are welcome. Please submit PRs or Issues to improve the model or add more knowledge points.
 
-## 许可证
 
-本项目采用MIT许可证，详见LICENSE文件。
+## Contact
 
-## 联系方式
-
-如有任何问题，请联系：TsangHaotian@hotmail.com
+For any questions, please contact: TsangHaotian@hotmail.com
 
 ---
 
-感谢您的关注和支持！
+Thank you for your attention and support!
