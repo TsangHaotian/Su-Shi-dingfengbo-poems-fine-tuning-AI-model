@@ -38,11 +38,11 @@ The training data includes 168 knowledge points related to "Ding Feng Bo," cover
   "content": "#定风波 #苏轼#主题思想",
   "summary": "此词为醉归遇雨抒怀之作。词人借雨中潇洒徐行之举动，表现了虽处逆境屡遭挫折而不畏惧不颓丧的倔强性格和旷达胸怀。"
 },
+...
 {
   "content": "#定风波 #苏轼#赏析 #首句",
   "summary": "首句“莫听穿林打叶声”，一方面渲染出雨骤风狂，另一方面又以“莫听”二字点明外物不足萦怀之意。"
 },
-...
 ```
 
 ## Model Inference
